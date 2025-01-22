@@ -1,0 +1,2188 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "ReadyMojo API",
+      "description": "API for PeakMojo platform",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/v1/users": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "summary": "Get Users",
+          "operationId": "get_users_v1_users_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "summary": "Get User",
+          "operationId": "get_user_v1_users__user_id__get",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/stats": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "summary": "Get User Stats",
+          "operationId": "get_user_stats_v1_users__user_id__stats_get",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/stats": {
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "summary": "Update User Stats",
+          "operationId": "update_user_stats_v1_users_stats_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/personas/peakmojo_personas": {
+        "get": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Get Peakmojo Personas",
+          "operationId": "get_peakmojo_personas_v1_personas_peakmojo_personas_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/personas/tags": {
+        "get": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Get Persona Tags",
+          "operationId": "get_persona_tags_v1_personas_tags_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/personas/search": {
+        "get": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Search Personas",
+          "operationId": "search_personas_v1_personas_search_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/personas": {
+        "post": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Create Persona",
+          "operationId": "create_persona_v1_personas_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/persona/{persona_id}": {
+        "get": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Get Persona",
+          "operationId": "get_persona_v1_persona__persona_id__get",
+          "parameters": [
+            {
+              "name": "persona_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Persona Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Update Persona",
+          "operationId": "update_persona_v1_persona__persona_id__put",
+          "parameters": [
+            {
+              "name": "persona_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Persona Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Delete Persona",
+          "operationId": "delete_persona_v1_persona__persona_id__delete",
+          "parameters": [
+            {
+              "name": "persona_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Persona Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/persona/{persona_id}/analysis": {
+        "get": {
+          "tags": [
+            "Personas"
+          ],
+          "summary": "Get Persona Analysis",
+          "operationId": "get_persona_analysis_v1_persona__persona_id__analysis_get",
+          "parameters": [
+            {
+              "name": "persona_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Persona Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/scenarios/peakmojo_scenarios": {
+        "get": {
+          "tags": [
+            "Scenarios"
+          ],
+          "summary": "Get Peakmojo Scenarios",
+          "operationId": "get_peakmojo_scenarios_v1_scenarios_peakmojo_scenarios_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/scenarios": {
+        "post": {
+          "tags": [
+            "Scenarios"
+          ],
+          "summary": "Create Scenario",
+          "operationId": "create_scenario_v1_scenarios_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/scenario/{scenario_id}": {
+        "get": {
+          "tags": [
+            "Scenarios"
+          ],
+          "summary": "Get Scenario",
+          "operationId": "get_scenario_v1_scenario__scenario_id__get",
+          "parameters": [
+            {
+              "name": "scenario_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Scenario Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Scenarios"
+          ],
+          "summary": "Update Scenario",
+          "operationId": "update_scenario_v1_scenario__scenario_id__put",
+          "parameters": [
+            {
+              "name": "scenario_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Scenario Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job_scenarios/peakmojo_scenarios": {
+        "get": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Get Peakmojo Job Scenarios",
+          "operationId": "get_peakmojo_job_scenarios_v1_job_scenarios_peakmojo_scenarios_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job_scenarios/tags": {
+        "get": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Get Job Scenario Tags",
+          "operationId": "get_job_scenario_tags_v1_job_scenarios_tags_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job_scenarios/search": {
+        "get": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Search Job Scenarios",
+          "operationId": "search_job_scenarios_v1_job_scenarios_search_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job_scenarios": {
+        "post": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Create Job Scenario",
+          "operationId": "create_job_scenario_v1_job_scenarios_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job_scenario/{scenario_id}": {
+        "get": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Get Job Scenario",
+          "operationId": "get_job_scenario_v1_job_scenario__scenario_id__get",
+          "parameters": [
+            {
+              "name": "scenario_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Scenario Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Update Job Scenario",
+          "operationId": "update_job_scenario_v1_job_scenario__scenario_id__put",
+          "parameters": [
+            {
+              "name": "scenario_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Scenario Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job_scenario/{scenario_id}/tags/actions": {
+        "post": {
+          "tags": [
+            "Job Scenarios"
+          ],
+          "summary": "Handle Job Scenario Tags",
+          "operationId": "handle_job_scenario_tags_v1_job_scenario__scenario_id__tags_actions_post",
+          "parameters": [
+            {
+              "name": "scenario_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Scenario Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/workspaces/{workspace_id}/personas": {
+        "get": {
+          "tags": [
+            "Workspaces"
+          ],
+          "summary": "Get Workspace Personas",
+          "operationId": "get_workspace_personas_v1_workspaces__workspace_id__personas_get",
+          "parameters": [
+            {
+              "name": "workspace_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Workspace Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/workspaces/{workspace_id}/scenarios": {
+        "get": {
+          "tags": [
+            "Workspaces"
+          ],
+          "summary": "Get Workspace Scenarios",
+          "operationId": "get_workspace_scenarios_v1_workspaces__workspace_id__scenarios_get",
+          "parameters": [
+            {
+              "name": "workspace_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Workspace Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/workspaces/{workspace_id}/job_scenarios": {
+        "get": {
+          "tags": [
+            "Workspaces"
+          ],
+          "summary": "Get Workspace Job Scenarios",
+          "operationId": "get_workspace_job_scenarios_v1_workspaces__workspace_id__job_scenarios_get",
+          "parameters": [
+            {
+              "name": "workspace_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Workspace Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/jobs": {
+        "get": {
+          "tags": [
+            "Jobs"
+          ],
+          "summary": "Get Jobs",
+          "operationId": "get_jobs_v1_jobs_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Jobs"
+          ],
+          "summary": "Create Job",
+          "operationId": "create_job_v1_jobs_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/job/{job_id}": {
+        "get": {
+          "tags": [
+            "Jobs"
+          ],
+          "summary": "Get Job",
+          "operationId": "get_job_v1_job__job_id__get",
+          "parameters": [
+            {
+              "name": "job_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Job Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/applications": {
+        "get": {
+          "tags": [
+            "Applications"
+          ],
+          "summary": "Get Applications",
+          "operationId": "get_applications_v1_applications_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Applications"
+          ],
+          "summary": "Create Application",
+          "operationId": "create_application_v1_applications_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/applications/stats": {
+        "get": {
+          "tags": [
+            "Applications"
+          ],
+          "summary": "Get Application Stats",
+          "operationId": "get_application_stats_v1_applications_stats_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/applications/{app_id}": {
+        "get": {
+          "tags": [
+            "Applications"
+          ],
+          "summary": "Get Application",
+          "operationId": "get_application_v1_applications__app_id__get",
+          "parameters": [
+            {
+              "name": "app_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "App Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Applications"
+          ],
+          "summary": "Update Application",
+          "operationId": "update_application_v1_applications__app_id__put",
+          "parameters": [
+            {
+              "name": "app_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "App Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Applications"
+          ],
+          "summary": "Delete Application",
+          "operationId": "delete_application_v1_applications__app_id__delete",
+          "parameters": [
+            {
+              "name": "app_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "App Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/practices": {
+        "get": {
+          "tags": [
+            "Practices"
+          ],
+          "summary": "Get Practices",
+          "operationId": "get_practices_v1_practices_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Practices"
+          ],
+          "summary": "Create Practice",
+          "operationId": "create_practice_v1_practices_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/practices/{practice_id}/messages": {
+        "get": {
+          "tags": [
+            "Practices"
+          ],
+          "summary": "Get Practice Messages",
+          "operationId": "get_practice_messages_v1_practices__practice_id__messages_get",
+          "parameters": [
+            {
+              "name": "practice_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Practice Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Practices"
+          ],
+          "summary": "Create Practice Message",
+          "operationId": "create_practice_message_v1_practices__practice_id__messages_post",
+          "parameters": [
+            {
+              "name": "practice_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Practice Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/skills": {
+        "get": {
+          "tags": [
+            "Skills"
+          ],
+          "summary": "Get Skills",
+          "operationId": "get_skills_v1_skills_get",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Skills"
+          ],
+          "summary": "Create Skill",
+          "operationId": "create_skill_v1_skills_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/skills/{skill_id}": {
+        "get": {
+          "tags": [
+            "Skills"
+          ],
+          "summary": "Get Skill",
+          "operationId": "get_skill_v1_skills__skill_id__get",
+          "parameters": [
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/skills": {
+        "get": {
+          "tags": [
+            "Skills"
+          ],
+          "summary": "Get User Skills",
+          "operationId": "get_user_skills_v1_users__user_id__skills_get",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/skills/{skill_id}": {
+        "post": {
+          "tags": [
+            "Skills"
+          ],
+          "summary": "Start User Skill",
+          "operationId": "start_user_skill_v1_users__user_id__skills__skill_id__post",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            },
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Skills"
+          ],
+          "summary": "Update User Skill",
+          "operationId": "update_user_skill_v1_users__user_id__skills__skill_id__put",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            },
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/certificates": {
+        "get": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Get Certificates",
+          "description": "Get all certificates.\n\nParameters:\n- include_skills: Whether to include associated skills in the response. Defaults to True.",
+          "operationId": "get_certificates_v1_certificates_get",
+          "parameters": [
+            {
+              "name": "include_skills",
+              "in": "query",
+              "required": false,
+              "schema": {
+                "type": "boolean",
+                "default": true,
+                "title": "Include Skills"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Create Certificate",
+          "operationId": "create_certificate_v1_certificates_post",
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/certificates/{certificate_id}": {
+        "get": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Get Certificate",
+          "operationId": "get_certificate_v1_certificates__certificate_id__get",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Delete Certificate",
+          "operationId": "delete_certificate_v1_certificates__certificate_id__delete",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/certificates/{certificate_id}/skills": {
+        "get": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Get Certificate Skills",
+          "operationId": "get_certificate_skills_v1_certificates__certificate_id__skills_get",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Add Certificate Skill",
+          "operationId": "add_certificate_skill_v1_certificates__certificate_id__skills_post",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/certificates/{certificate_id}/skills/{skill_id}": {
+        "delete": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Remove Certificate Skill",
+          "operationId": "remove_certificate_skill_v1_certificates__certificate_id__skills__skill_id__delete",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            },
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/certificates": {
+        "get": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Get User Certificates",
+          "operationId": "get_user_certificates_v1_users__user_id__certificates_get",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/certificates/{certificate_id}/issue": {
+        "post": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Issue Certificate",
+          "operationId": "issue_certificate_v1_users__user_id__certificates__certificate_id__issue_post",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            },
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/certificates/{certificate_id}/revoke": {
+        "post": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Revoke Certificate",
+          "operationId": "revoke_certificate_v1_users__user_id__certificates__certificate_id__revoke_post",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            },
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/certificates/{certificate_id}": {
+        "put": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Update User Certificate",
+          "description": "Update a user's certificate progress and level.\n\nParameters:\n- progress: Optional[int] - Progress percentage (0-100)\n- level: Optional[int] - Certificate level",
+          "operationId": "update_user_certificate_v1_users__user_id__certificates__certificate_id__put",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            },
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/certificates/{certificate_id}/skills/{skill_id}/courses": {
+        "post": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Add Skill Course",
+          "operationId": "add_skill_course_v1_certificates__certificate_id__skills__skill_id__courses_post",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            },
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "get": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Get Skill Courses",
+          "operationId": "get_skill_courses_v1_certificates__certificate_id__skills__skill_id__courses_get",
+          "parameters": [
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            },
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/users/{user_id}/certificates/{certificate_id}/skills/{skill_id}/courses/{course_id}": {
+        "put": {
+          "tags": [
+            "Certificates"
+          ],
+          "summary": "Update User Course",
+          "operationId": "update_user_course_v1_users__user_id__certificates__certificate_id__skills__skill_id__courses__course_id__put",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "User Id"
+              }
+            },
+            {
+              "name": "certificate_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Certificate Id"
+              }
+            },
+            {
+              "name": "skill_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Skill Id"
+              }
+            },
+            {
+              "name": "course_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "title": "Course Id"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "content": {
+                "application/json": {
+                  "schema": {
+  
+                  }
+                }
+              }
+            },
+            "422": {
+              "description": "Validation Error",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HTTPValidationError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "HTTPValidationError": {
+          "properties": {
+            "detail": {
+              "items": {
+                "$ref": "#/components/schemas/ValidationError"
+              },
+              "type": "array",
+              "title": "Detail"
+            }
+          },
+          "type": "object",
+          "title": "HTTPValidationError"
+        },
+        "ValidationError": {
+          "properties": {
+            "loc": {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
+              },
+              "type": "array",
+              "title": "Location"
+            },
+            "msg": {
+              "type": "string",
+              "title": "Message"
+            },
+            "type": {
+              "type": "string",
+              "title": "Error Type"
+            }
+          },
+          "type": "object",
+          "required": [
+            "loc",
+            "msg",
+            "type"
+          ],
+          "title": "ValidationError"
+        }
+      }
+    },
+    "tags": [
+      {
+        "name": "Users",
+        "description": "User management endpoints"
+      },
+      {
+        "name": "Personas",
+        "description": "Persona management endpoints"
+      },
+      {
+        "name": "Scenarios",
+        "description": "Scenario management endpoints"
+      },
+      {
+        "name": "Job Scenarios",
+        "description": "Job scenario management endpoints"
+      },
+      {
+        "name": "Applications",
+        "description": "Job application management endpoints"
+      },
+      {
+        "name": "Practices",
+        "description": "Practice session management endpoints"
+      },
+      {
+        "name": "Jobs",
+        "description": "Job management endpoints"
+      },
+      {
+        "name": "Skills",
+        "description": "Skill management endpoints"
+      },
+      {
+        "name": "Certificates",
+        "description": "Certificate management endpoints"
+      },
+      {
+        "name": "Workspaces",
+        "description": "Workspace management endpoints"
+      }
+    ]
+  }
