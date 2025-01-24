@@ -11,7 +11,8 @@ dependencies = [
     "mcp",
     "pydantic",
     "requests",
-    "pytz"
+    "pytz",
+    "pyyaml"
 ]
 
 [tool.hatch.build.targets.wheel]
